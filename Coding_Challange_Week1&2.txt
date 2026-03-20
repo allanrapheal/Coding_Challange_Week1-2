@@ -1,0 +1,31 @@
+A)Which statistical measure would you choose — Mean, Median, or Mode — to represent typical daily sales and why?
+
+Ans: Median. The sales data will have spiked values depending upon different reasons, so this will rule out the usage of Mean. For the case of Mode, for a sales data there can be multiple mode which will make it difficult. So the ideal and practical option will be the using Median.
+
+
+B) Write an Excel formula to calculate this metric only for Region = "South", ignoring blank sales values.
+
+Ans: =AVERAGEIF(D2:D11,"South",C2:C11)
+Average function automatically ignores blank cells without the need to count the blank cells separately.
+
+
+C) If management still insists on using Average, how would you modify the Excel formula to reduce the impact of extreme values without removing rows?
+
+Ans: The best approach here would be to exclude the outliers on the sides, that is the lower and higher set of values. The best option here is by using the function "TRIMMEAN"
+
+=TRIMMEAN(Table1[Sales_Amount],0.25)
+
+'0.25' is the percentage of values that are considered as outliers in the data, this value can be determined using the standard deviation and total number of data. 
+
+
+
+
+
+
+
+
+
+
+
+
+
